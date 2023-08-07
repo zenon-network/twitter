@@ -116,4 +116,4 @@ Which one is cuter?
 
 ## Need Help?
 
-If you have any questions or suggestions, please [create a new issue](https://github.com/0x3639/action/issues/new).
+If you have any questions or suggestions, please [create a new issue](../../../twitter/issues/new/).
