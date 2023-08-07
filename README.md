@@ -4,7 +4,7 @@ This repository allows you to request a tweet to be sent out via the @zenon_netw
 
 ## Creating a New Tweet
 
-1. Click this link: <kbd>[Create new tweet](../../../new/master/?filename=tweets/<your-path>.tweet)</kbd>
+1. Click this link: <kbd>[Create new tweet](../../../twitter/new/master/?filename=tweets/<your-path>.tweet)</kbd>
 2. Replace `<your-path>` in the URL with the desired path of your file (e.g. `tweets/hello-world.tweet`).
 3. Add your tweet content in the new file and commit it.
 
