@@ -54,9 +54,13 @@ reply: https://twitter.com/gr2m/status/1409601188362809349
 @gr2m I love your work!
 ```
 
-### Retweeting and Quote-Retweeting
+### Retweeting
 
-Use the `retweet` frontmatter item with the URL of the tweet you wish to retweet. If you want to quote-retweet, simply add your comment after the frontmatter.
+```
+retweet: https://twitter.com/gr2m/status/1409601188362809349
+```
+
+### Quote-Retweeting
 
 ```
 ---
