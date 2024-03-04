@@ -1,5 +1,5 @@
 ---
-threadDelimiter: "+++"
+thread-delimiter: +++
 media:
   - file: syrius_mobile.jpg
     alt: An infographic showing the UI of the syrius mobile wallet, available now on android.
