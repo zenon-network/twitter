@@ -1,5 +1,17 @@
+---
+media:
+  - file: conference.jpg
+---
+
 test1
 
+---
+---
+media:
+  - file: conference1.jpg
+  - file: conference2.jpg
+  - file: conference3.jpg
+  - file: conference4.jpg
 ---
 
 test2
