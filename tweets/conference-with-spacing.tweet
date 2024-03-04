@@ -1,5 +1,5 @@
 ---
-thread-delimiter: ~~~
+thread-delimiter: ---
 media:
   - file: syrius_mobile.jpg
     alt: An infographic showing the UI of the syrius mobile wallet, available now on android.
@@ -16,7 +16,7 @@ Functionalities:
 
 Download here: https://forum.zenon.org/t/syrius-wallet-mobile-app/659/125?u=0x3639
 
-~~~
+---
 
 Get your tZNN and tQSR through the faucet below and start testing the mobile s y r i u s wallet!
 
