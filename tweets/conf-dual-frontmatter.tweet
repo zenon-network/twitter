@@ -1,7 +1,7 @@
 ---
 media: 
-- file: conference.jpg
-  alt: Zenon Network collaboration with build_
+  - file: conference.jpg
+    alt: Zenon Network collaboration with build_
 ---
 🏗 Building Network States Conference @ ETH Denver Recap:
 
@@ -13,14 +13,14 @@ Highlights below 👇
 ---
 ---
 media:
-- file: conference1.jpg
-  alt: Building Network States Conference Postcard (front)
-- file: conference2.jpg
-  alt: Building Network States Conference Postcard (back)
-- file: conference3.jpg
-  alt: Building Network States Conference seats
-- file: conference4.jpg
-  alt: Building Network States Conference venue
+  - file: conference1.jpg
+    alt: Building Network States Conference Postcard (front)
+  - file: conference2.jpg
+    alt: Building Network States Conference Postcard (back)
+  - file: conference3.jpg
+    alt: Building Network States Conference seats
+  - file: conference4.jpg
+    alt: Building Network States Conference venue
 ---
 Hosted by @buildcities, a global collective of emerging startup cities and inspired by @balajis' "The Network State".
 
