@@ -8,8 +8,8 @@ test1
 ---
 ---
 media:
-  - file: conference1.jpg
-  - file: conference2.jpg
+  - file: conference1.jpeg
+  - file: conference2.jpeg
   - file: conference3.jpg
   - file: conference4.jpg
 ---
