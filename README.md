@@ -1,73 +1,108 @@
-# CEX Fundraiser - Open until May 3rd, 2024
+# zenon-network/twitter
 
-![CEX Fundraiser Infographic](archive/2024/media/cex_fundraiser.jpg)
+Welcome to the Zenon Network's Twitter GitHub repository. This project allows you to create and manage tweets directly from this repository. Follow the instructions below to get started:
 
-This document provides all the necessary details about the CEX fundraising event organized by the Zenon Network community, including a short bio about participating members in the multisignature wallet, and how you can contribute.
+## The `tweets/` Folder
 
-For more information, refer to the original [discussion](https://forum.zenon.org/t/cex-fundraiser-open-until-may-3rd-2024).
+To create a new tweet, create a new `*.tweet` file in the `tweets/` folder.
 
-## Fundraiser Details
-- Objective: Raise funds for a CEX listing.
-- Target goal: **$80K USDT**
-- Recommended currencies: $USDT / $USDC, $ETH, $WBTC, $wZNN, $ZNN
+### Example
 
-## How to Contribute
-:warning: ETHEREUM NETWORK ONLY :warning: <br>
-<br>
-Please, send donations to the following Ethereum address or ENS name.<br>
-<br>
-Zenon Network Fundraising Multisignature Address:<br>
-`0xA06Ded756B823fCe92d5Da890aEd1C2d6677F2B3`
+Create a new file `tweets/dd-mm-yy-hello-world.tweet` with the content:
 
-<br>
+```
+Hello, world!
+```
 
-Alternatively, you can use the following ENS (Ethereum Name Service) domain name on compatible wallets:<br>
-`zenonnetwork.eth`
+### File Naming Convention
+File names must follow the dd-mm-yy-tweet-name.tweet nomenclature. This format helps maintain a clear and organized structure, ensuring each tweet is easily identifiable by the date of creation and a descriptive name.
+
+### File Naming Convention
+
+File names must follow the `dd-mm-yy-tweet-name.tweet` nomenclature. For example, `12-06-24-hello-world.tweet`.
 
 
+## Notes
+
+- Only newly created files are handled; deletions, updates, or renames are ignored.
+- `*.tweet` files will not be created for tweets you send out directly from twitter.com.
+- If you need to rename an existing tweet file, please do so locally using [`git mv old_filename new_filename`](https://help.github.com/en/articles/renaming-a-file-using-the-command-line), otherwise it may be seen as deleted and added, which would trigger a new tweet.
+- Your message must fit into a single tweet.
+
+
+
+## Advanced Tweeting
+
+Beyond tweeting out plain-text tweets, the twitter-together github action also supports creating polls, threading a chain of tweets, and adding images to tweets.
+
+### Polls
+
+Polls can be included directly in the body of tweet like so:
+
+```
+What is your favorite color?
+
+( ) Red
+( ) Blue
+( ) Green
+```
+
+A poll can also be defined in frontmatter, rather than in the tweet body, like so:
+
+```
+---
+poll:
+  - Red
+  - Blue
+  - Green
 ---
 
-⚠️ NETWORK OF MOMENTUM ONLY ⚠️<br>
-<br>
+What is your favorite color?
+```
 
-Due to popular demand, [SultanOfStaking has enabled his SOS Community Address to receive native ZNN donations](https://twitter.com/sultanofstaking/status/1778099355821478357?s=61&t=Q30TfKSdOpq7z9EKyk_Dbg) for the duration of the event. <br>
+### Include Media
 
-Please send donations to the following NoM address:<br>
+To include media items with your tweet, include the `media` frontmatter item as an array with each item having a `file` property and an optional `alt` property. The `file` property should be the name of a file within the `media` directory of your repository (same level as the `tweets` directory).
 
-SOS Community Address: <br>
-`z1qrcc2c65w4d3zested2wl00hfyhr7022h92l92`
+(Note: Although alt text can be set in frontmatter, it is not yet actually passed to Twitter due to library limitations).
 
-<br>
+```
+---
+media:
+  - file: cat.jpg
+    alt: A cat
+  - file: dog.jpg
+    alt: A dog
+---
 
-## CEX Multisig Signers - 6 out of 8 signatures required - *powered by [Safe](safe.global)*
+Here are some cute animals!
+```
 
+### Thread a Chain of Tweets
 
-### [Shaimo](https://twitter.com/shaimo) `@shaimo`
-An og amongst ogs. Participated in xStakes, the original inception of Zenon.
+To thread a chain of tweets, use `---` to delimit each tweet in the file. You can optionally set `threadDelimiter` in the frontmatter to change the delimiter for the next tweet in the thread. Each tweet in a thread supports its own frontmatter.
 
-### [SultanOfStaking](https://twitter.com/SultanOfStaking) `@SultanOfStaking`
-Brand to one of the most delegated pillars historically. Creator of #FreeZenonFriday.
+```
+---
+media:
+  - file: cat.jpg
+    alt: A cat
+  - file: dog.jpg
+    alt: A dog
+---
 
-### [sumamu](https://twitter.com/su_mamu_) `@su_mamu_`
-Nominated for HyperCore. Part of the Multichain team that developed the EVM bridge. Rockstar dev.
+Here are some cute animals!
 
-### [DeeZNNutz](https://twitter.com/0x3639) `@0x3639`
-One of the most engaged members of the Zenon community, contributing on multiple fronts and currently serving as the lead maintainer of the zenon-network GitHub repository.
+---
+---
+poll:
+  - Cat
+  - Dog
+---
 
-### [coinselor](https://twitter.com/coinselor) `@coinselor`
-Arquitect behind ATSocy, a publication about NoM. Author of "The REAL Zenon Enigma", an article trying to create a holistic view of NoM's BTC interoperability. Maintainer of Zenon Social channels.
+Which one is cuter?
+```
 
-### [Stark](https://twitter.com/Stark_of_Zenon) `@Stark_of_Zenon`
-Outspoken alien and creator of "Zenon Core", an ordinals collection that highlights the Zenon gensis. Owner of Stark Pillar. Maintainer of Zenon Social channels.
+## Questions?
 
-### [Zashu](https://twitter.com/zashounet) `@zashounet`
-A well-known alien with deep knowledge of and curiosity about Zenon's mysterious origins. Maintainer of Zenon Social channels.
-
-### [Sugoi](https://twitter.com/sugoibtc) `@sugoibtc`
-Longstanding member of Zenon's first awareness initiative (ZIF). Owner of the Outlawz Pillar. Maintainer of Zenon Social channels.
-
-## How to Track Donation Amounts
-To monitor the donations, please refer to the following wallet addresses in a blockchain explorer:
-- [Zenon Network Fundraising Address (ETH)](https://etherscan.io/address/0xA06Ded756B823fCe92d5Da890aEd1C2d6677F2B3)
-- [SOS Community Address (NoM)](https://zenonhub.io/explorer/account/z1qrcc2c65w4d3zested2wl00hfyhr7022h92l92)
-
+If you have any further questions or suggestions, please join the conversation on our [Discord](https://discord.gg/zenonnetwork).
